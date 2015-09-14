@@ -17,19 +17,12 @@ if __name__ == '__main__':
 	f=open("subset.csv",'w')
 	if (f.closed):
 		print "coudnot open file to read\n"
-		#return -1
+		
 	rospy.init_node('openni_link',anonymous=True)
    # bag = rosbag.Bag('subset.bag')
 	print "hi this is 1st value of i=%d" % (i)
 	i=i+1
-	header=['neck_2.x', 'neck_2.y', 'neck_2.z', 'right_shoulder_2.x', 'right_shoulder_2.y', 'right_shoulder_2.z', 'right_elbow_2.x',\
-		'right_elbow_2.y', 'right_elbow_2.z', 'right_hand_2.x', 'right_hand_2.y', 'right_hand_2.z', 'right_hip_2.x',\
-		'right_hip_2.y', 'right_hip_2.z', 'time']
-	#for j in range(len(header)):	
-	#	if (j==len(header)):
-	#		f.write(header[j]+'\n')
-	#	else:
-	#		f.write(header[j]+',')
+	
 	f.write('neck_2.x, neck_2.y, neck_2.z, right_shoulder_2.x, right_shoulder_2.y, right_shoulder_2.z, right_elbow_2.x,')
 	f.write('right_elbow_2.y, right_elbow_2.z, right_hand_2.x, right_hand_2.y, right_hand_2.z, right_hip_2.x,')
 	f.write('right_hip_2.y, right_hip_2.z, time.sec, time.nsec\n')
